@@ -56,6 +56,9 @@ TinyGPS::TinyGPS()
 //
 // public methods
 //
+const float TinyGPS::GPS_INVALID_F_ANGLE = 1000.0;
+const float TinyGPS::GPS_INVALID_F_ALTITUDE = 1000000.0;
+const float TinyGPS::GPS_INVALID_F_SPEED = -1.0;
 
 bool TinyGPS::encode(char c)
 {
@@ -424,6 +427,3 @@ float TinyGPS::f_speed_kmph()
   return sk == GPS_INVALID_F_SPEED ? GPS_INVALID_F_SPEED : _GPS_KMPH_PER_KNOT * sk; 
 }
 
-const float TinyGPS::GPS_INVALID_F_ANGLE = 1000.0;
-const float TinyGPS::GPS_INVALID_F_ALTITUDE = 1000000.0;
-const float TinyGPS::GPS_INVALID_F_SPEED = -1.0;
